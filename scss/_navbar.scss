@@ -1,0 +1,36 @@
+#mainNav {
+	background-color: $white;
+	box-shadow: $box-shadow;
+	// transition: background-color 0.2s ease;
+	.navbar-brand{
+		color: $white;
+	}
+	.navbar-nav{
+		.nav-link {
+			color: $white;
+		}
+	}
+	@include media-breakpoint-up(lg) { 
+		background-color: transparent;
+		&.navbar-scrolled{
+			background-color: $white;
+			.navbar-brand{
+				color: $gray-900;
+			}
+			.navbar-nav{
+				.nav-link {
+					color: $gray-900;
+				}
+			}
+		}
+		
+	}
+}
+
+header.masthead{
+	background: url('../img/card-2.jpg');
+	@include media-breakpoint-up(lg) {
+	  height: 100vh;
+	  padding-top: $navbar-height;
+	}
+}
