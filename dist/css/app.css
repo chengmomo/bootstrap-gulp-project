@@ -9531,21 +9531,42 @@ hr.light {
 #mainNav {
   background-color: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s ease;
 }
 
 #mainNav .navbar-brand {
-  color: #fff;
+  color: #212529;
 }
 
 #mainNav .navbar-nav .nav-link {
-  color: #fff;
+  color: #212529;
+  font-weight: 600;
+}
+
+#mainNav .navbar-nav .nav-link:hover, #mainNav .navbar-nav .nav-link:active {
+  color: #8490ff;
+}
+
+#mainNav .navbar-nav .nav-link.active {
+  color: #8490ff !important;
 }
 
 @media (min-width: 992px) {
   #mainNav {
     background-color: transparent;
+    box-shadow: none;
+  }
+  #mainNav .navbar-brand {
+    color: #fff;
+  }
+  #mainNav .navbar-nav .nav-link {
+    color: #fff;
+  }
+  #mainNav .navbar-nav .nav-link:hover {
+    color: #fff;
   }
   #mainNav.navbar-scrolled {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     background-color: #fff;
   }
   #mainNav.navbar-scrolled .navbar-brand {
@@ -9604,9 +9625,10 @@ header.masthead {
 
 #experience .timeline li {
   position: relative;
-  left: 50%;
+  margin: 0 auto;
   background-color: #f9f9ff;
   width: 4px;
+  padding-bottom: 20px;
 }
 
 #experience .timeline li:before {
@@ -9645,6 +9667,27 @@ header.masthead {
   left: calc(-500px - 40px);
 }
 
+@media screen and (max-width: 1170px) {
+  #experience .timeline li .content {
+    width: 41vw;
+  }
+  #experience .timeline li:nth-child(even) .content {
+    left: calc(-41vw - 40px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #experience .timeline li {
+    margin-left: 20px;
+  }
+  #experience .timeline li .content {
+    width: calc(100vw - 100px);
+  }
+  #experience .timeline li:nth-child(even) .content {
+    left: 40px;
+  }
+}
+
 #about .badge {
   padding: 10px 24px;
 }
@@ -9657,22 +9700,18 @@ header.masthead {
 #about .title-item {
   color: #6c757d;
   text-align: right;
-  margin-bottom: 8px;
-  margin-top: 15px;
+  margin-bottom: 6px;
+  margin-top: 12px;
 }
 
 #contact i {
   color: #8490ff;
-  font-size: 24px;
+  font-size: 22px;
   margin-right: 20px;
 }
 
-#contact .contact-item {
-  margin-bottom: 4px;
-}
-
 #contact .contact-item p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #contact .contact-pics li {

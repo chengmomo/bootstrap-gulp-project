@@ -40,10 +40,11 @@ $content-width: 500px;
 #experience {
 	.timeline li {
 		position: relative;
-		left: 50%;
-	    background-color: #f9f9ff;
+		// left: 50%;
+		margin: 0 auto;
+	  background-color: #f9f9ff;
 		width: 4px;
-		// padding-bottom: 20px;
+		padding-bottom: 20px;
 		&:before{
 		    content: '';
 		    position: absolute;
@@ -76,7 +77,27 @@ $content-width: 500px;
 			left: calc(-#{$content-width} - 40px);
 		}
 	}
+	@media screen and (max-width: 1170px) {
+	  .timeline li .content {
+	    width: 41vw;
+	  }
+	  .timeline li:nth-child(even) .content {
+	    left: calc(-41vw - 40px);
+	  }
+	}
+  @media screen and(max-width: 700px) {
+ 		.timeline li {
+		  margin-left: 20px;
+ 			.content{
+ 				width: calc(100vw - 100px);
+ 			}
+ 			&:nth-child(even) .content{
+ 				left: 40px;
+ 			}
+ 	  }
+  }
 }
+
 
 #about{
 	.badge{
@@ -89,21 +110,21 @@ $content-width: 500px;
 	.title-item{
 		color: $gray-600;
 		text-align: right;
-		margin-bottom: 8px;
-		margin-top: 15px;
+		margin-bottom: 6px;
+		margin-top: 12px;
 	}
 }
 
 #contact {
 	i {
-	    color: $primary;
-		font-size: 24px;
+	  color: $primary;
+		font-size: 22px;
 		margin-right: 20px;
 	}
 	.contact-item {
-		margin-bottom: 4px;
+		// margin-bottom: 4px;
 		p{
-			font-size: 20px;
+			font-size: 18px;
 		}
 	}
 	.contact-pics {
