@@ -62,7 +62,10 @@ function modules() {
 			'!./node_modules/jquery/dist/core.js'
 		])
 		.pipe(gulp.dest('./dist/vendor/jquery'));
-	return mergeStream(fontAwesomeCSS, fontAwesomeWebfonts, bootstrap, jQuery);
+	// Owl Carousel
+	var owlCarousel = gulp.src('./node_modules/owl-carousel/owl-carousel/*')
+		  .pipe(gulp.dest('./dist/vendor/owl-carousel'));
+	return mergeStream(fontAwesomeCSS, fontAwesomeWebfonts, bootstrap, jQuery, owlCarousel);
 }
 
 // CSS task: scss编译后的css将注入到浏览器里实现更新

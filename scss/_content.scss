@@ -2,9 +2,17 @@
 	// background-color: #007BFF;
 	.work-item {
 		padding: 40px 0;
-		height: 440px;
-		img {
-			height: 120px;
+		height: 420px;
+		.img1 {
+			height: 115px;
+		}
+		.img2 {
+			height: 115px;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		a {
+			word-wrap: break-word;
 		}
 		p {
 			height: 80px;
@@ -25,15 +33,17 @@
 			box-shadow: $box-shadow;
 			border-radius: 5px;
 		}
+		@include media-breakpoint-down(sm) {
+			height: 390px;
+			img {
+				height: 80px;
+			}
+		}
 	}
 }
 
 #skill{
-	.skill-img{
-		img{
-			height: 300px;
-		}
-	}
+
 }
 
 $content-width: 500px;
@@ -85,7 +95,7 @@ $content-width: 500px;
 	    left: calc(-41vw - 40px);
 	  }
 	}
-  @media screen and(max-width: 700px) {
+    @media screen and(max-width: 700px) {
  		.timeline li {
 		  margin-left: 20px;
  			.content{
@@ -94,8 +104,8 @@ $content-width: 500px;
  			&:nth-child(even) .content{
  				left: 40px;
  			}
- 	  }
-  }
+ 	    }
+    }
 }
 
 
@@ -137,4 +147,14 @@ $content-width: 500px;
 			}
 		}
 	}
+	.skill-img{
+		img{
+			height: 250px;
+		}
+	}
+}
+
+.footer-section {
+	color: white;
+	background-color: #04091e;
 }

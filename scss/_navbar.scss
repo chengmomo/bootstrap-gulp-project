@@ -49,9 +49,22 @@
 }
 
 header.masthead{
+	padding-top: 10rem;
+	padding-bottom: calc(10rem - #{$navbar-height});
 	background: url('../img/card-2.jpg');
+	background-attachment: scroll;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	h1 {
+		font-size: 2.2rem;
+	}
 	@include media-breakpoint-up(lg) {
 	  height: 100vh;
 	  padding-top: $navbar-height;
+	  padding-bottom: 0;
+	  h1 {
+	  	font-size: 3rem;
+	  }
 	}
 }

@@ -9578,23 +9578,47 @@ hr.light {
 }
 
 header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 72px);
   background: url("../img/card-2.jpg");
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header.masthead h1 {
+  font-size: 2.2rem;
 }
 
 @media (min-width: 992px) {
   header.masthead {
     height: 100vh;
     padding-top: 72px;
+    padding-bottom: 0;
+  }
+  header.masthead h1 {
+    font-size: 3rem;
   }
 }
 
 .work-inner .work-item {
   padding: 40px 0;
-  height: 440px;
+  height: 420px;
 }
 
-.work-inner .work-item img {
-  height: 120px;
+.work-inner .work-item .img1 {
+  height: 115px;
+}
+
+.work-inner .work-item .img2 {
+  height: 115px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.work-inner .work-item a {
+  word-wrap: break-word;
 }
 
 .work-inner .work-item p {
@@ -9619,8 +9643,13 @@ header.masthead {
   border-radius: 5px;
 }
 
-#skill .skill-img img {
-  height: 300px;
+@media (max-width: 767.98px) {
+  .work-inner .work-item {
+    height: 390px;
+  }
+  .work-inner .work-item img {
+    height: 80px;
+  }
 }
 
 #experience .timeline li {
@@ -9722,4 +9751,13 @@ header.masthead {
 
 #contact .contact-pics li img {
   width: 100%;
+}
+
+#contact .skill-img img {
+  height: 250px;
+}
+
+.footer-section {
+  color: white;
+  background-color: #04091e;
 }
