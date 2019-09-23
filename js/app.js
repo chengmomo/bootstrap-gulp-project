@@ -2,7 +2,7 @@ $(function() {
 	var age = new Date().getFullYear() - 1993;
 	$("#age").html(age + '岁')
 
-    // bootstrap scrollspy: Activate scrollspy to add active class to navbar items on scroll
+	// bootstrap scrollspy: Activate scrollspy to add active class to navbar items on scroll
 	// 搭配css的.active
 	$('body').scrollspy({
 		target: '#navbar-collapse', //data-target
@@ -21,4 +21,9 @@ $(function() {
 	navbarCollapse();
 	// Collapse the navbar when page is scrolled
 	$(window).scroll(navbarCollapse);
+
+	// Closes responsive menu when a scroll trigger link is clicked
+	$('.nav-link').click(function() {
+		$('.navbar-collapse').collapse('hide');
+	})
 })
