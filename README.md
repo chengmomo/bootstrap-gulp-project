@@ -1,6 +1,6 @@
 # bootstrap-gulp-project
 bootstrap+gulp+font-awesome个人主页
-- `npm run watch` 
+- `npm run watch` 执行gulp watch
 
 #### Gulp Tasks
 

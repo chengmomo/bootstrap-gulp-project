@@ -1,5 +1,4 @@
 .work-inner {
-	// background-color: #007BFF;
 	.work-item {
 		padding: 40px 0;
 		height: 420px;
@@ -19,7 +18,7 @@
 			padding: 0 20px;
 		}
 		.more_btn {
-			background-color: #007BFF;
+			background-color: $primary;
 			color: white;
 			display: inline-block;
 			height: 50px;
@@ -132,7 +131,6 @@ $content-width: 500px;
 		margin-right: 20px;
 	}
 	.contact-item {
-		// margin-bottom: 4px;
 		p{
 			font-size: 18px;
 		}
