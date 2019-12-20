@@ -117,14 +117,23 @@ function js() {
 function images() {
 	return gulp.src('./img/**/*')
 		.pipe(cache(imagemin({
-			optimizationLevel: 5, // 取值范围：0-7（优化等级），默认：3  
-			progressive: true, // 无损压缩jpg图片，默认：false 
-			interlaced: true, // 隔行扫描gif进行渲染，默认：false 
-			multipass: true // 多次优化svg直到完全优化，默认：false 
+			optimizationLevel: 5, // 取值范围：0-7（优化等级），默认：3
+			progressive: true, // 无损压缩jpg图片，默认：false
+			interlaced: true, // 隔行扫描gif进行渲染，默认：false
+			multipass: true // 多次优化svg直到完全优化，默认：false
 		})))
 		.pipe(gulp.dest('./dist/img'))
 		.pipe(notify({
 			message: 'Images task complete'
+		}));
+}
+
+// resource task
+function resource() {
+	return gulp.src('./resource/**/*')
+		.pipe(gulp.dest('./dist/resource'))
+		.pipe(notify({
+			message: 'Resource task complete'
 		}));
 }
 
@@ -133,11 +142,12 @@ function watchFiles() {
 	gulp.watch("./scss/**/*", css);
 	gulp.watch(["./js/**/*", "!./js/**/*.min.js"], js);
 	gulp.watch("./img/**/*", images);
+	gulp.watch("./resource/**/*", resource);
 	gulp.watch("./**/*.html", browserSyncReload);
 }
 
 const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, gulp.parallel(css, js, images));
+const build = gulp.series(vendor, gulp.parallel(css, js, images, resource));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browser));
 exports.build = build;
 exports.watch = watch;
