@@ -29,7 +29,8 @@ $(function () {
 })
 
 function onDownFile(filename) {
-    // const downUrl = `http://10.1.109.123:19092/down/to?url=${encodeURIComponent(url)}`;
+    // var downUrl = `http://10.1.109.123:19092/down/to?url=${encodeURIComponent(url)}`;
+    // var downUrl = "http://imtt.dd.qq.com/16891/26747DD8B125A8479AD0C9D22CA47BC9.apk?fsname=com.snda.wifilocating_4.2.91_3211.apk&csr=1bbd";
     var downUrl = './../resource/me.pdf';
     // 创建隐藏的可下载链接
     var eleLink = document.createElement('a');
